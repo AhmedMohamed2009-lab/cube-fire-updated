@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مكعبات النار أونلاين</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hp" class="hud">❤ الصحة<div id="hpb"><div id="hpf"></div></div></div>
+<div id="sc" class="hud"></div>
+<div id="tm" class="hud"></div>
+<div id="kf" class="hud"></div>
+<div id="am" class="hud"></div>
+<div id="cr" class="hud"><i></i><i></i><i></i><i></i></div>
+<div id="hm"></div><div id="vg"></div>
+<div id="bn" class="hud"></div>
+<div id="tc"><button class="tb" id="fire">🔫</button><button class="tb" id="rel">R</button><button class="tb" id="sw">⇄</button><button class="tb" id="jmp">⇧</button></div>
+<!-- Quick chat -->
+<div id="qc" class="hud" style="pointer-events:auto;bottom:14px;right:50%;transform:translateX(50%);display:flex;gap:6px;flex-wrap:wrap;justify-content:center">
+  <button data-chat="GG 😂" style="padding:6px 10px;font-size:13px;border-radius:8px;background:#fff2;border:1px solid #fff4;color:#fff;cursor:pointer">GG 😂</button>
+  <button data-chat="👍" style="padding:6px 10px;font-size:13px;border-radius:8px;background:#fff2;border:1px solid #fff4;color:#fff;cursor:pointer">👍</button>
+  <button data-chat="يا نصاب 😈" style="padding:6px 10px;font-size:13px;border-radius:8px;background:#fff2;border:1px solid #fff4;color:#fff;cursor:pointer">يا نصاب</button>
+  <button data-chat="🔥🔥🔥" style="padding:6px 10px;font-size:13px;border-radius:8px;background:#fff2;border:1px solid #fff4;color:#fff;cursor:pointer">🔥</button>
+  <button id="mute" style="padding:6px 10px;font-size:13px;border-radius:8px;background:#fff2;border:1px solid #fff4;color:#fff;cursor:pointer">🎤</button>
+</div>
+<div id="ov">
+  <div id="pm" class="pn">
+    <h1>مكعبات النار أونلاين</h1>
+    <input id="nm" maxlength="12" placeholder="اسمك">
+    <div class="row"><label>اللاعبين <select id="mx"><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label>
+    <label>الوقت <select id="mn"><option value="2">2 د</option><option value="3">3 د</option><option value="5" selected>5 د</option><option value="10">10 د</option></select></label></div>
+    <button id="bh">🏠 اعمل روم</button>
+    <div class="row"><input id="cd" maxlength="4" placeholder="كود الروم" style="text-transform:uppercase"><button id="bj">🔑 ادخل</button></div>
+    <div id="st"></div>
+    <p class="sm"><b>WASD</b> حركة · <b>الماوس</b> تصويب · <b>كليك</b> إطلاق · <b>R</b> تعبئة · <b>Shift</b> جري · <b>Space</b> نط · <b>1 2 3 / Q</b> أسلحة<br>
+    Kill Streak: 3 قتلات = مكافأة عشوائية فورية · 5 قتلات = "حالة جنون" للكل<br>
+    🎤 صوت مباشر بين اللاعبين · أزرار شات سريع + كتم المايك<br>
+    الموبايل: يسار للحركة، يمين للتصويب</p>
+  </div>
+  <div id="pr" class="pn" hidden>
+    <h1>الروم</h1>
+    <p>الكود (دوس عليه للنسخ)</p><div id="rc"></div>
+    <div id="rn"></div><div id="rl"></div>
+    <button id="bs">▶ ابدأ الماتش</button><p id="rw">مستنيين الهوست يبدأ الماتش...</p>
+    <button id="bl" class="gh">خروج</button>
+  </div>
+  <div id="pe" class="pn" hidden>
+    <h1>🏁 خلص الماتش</h1><div id="ep"></div>
+    <button id="ba">🔁 ماتش تاني</button><p id="bw">مستنيين الهوست يبدأ ماتش جديد...</p>
+    <button id="bw2" class="gh">خروج</button>
+  </div>
+</div>
+<script src="peerjs.min.js"></script>
+<script src="online.js"></script>
+</body>
+</html>
